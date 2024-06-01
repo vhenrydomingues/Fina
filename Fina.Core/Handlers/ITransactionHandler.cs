@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Transactions;
+using Fina.Core.Models;
 using Fina.Core.Requests.Transactions;
 using Fina.Core.Responses;
 
@@ -14,6 +14,6 @@ namespace Fina.Core.Handlers
         Task<Response<Transaction?>> UpdateAsync(UpdateTransactionRequest request);
         Task<Response<Transaction?>> DeleteAsync(DeleteTransactionRequest request);
         Task<Response<Transaction?>> GetByIdAsync(GetTransactionByIdRequest request);
-        Task<PagedResponse<List<Transaction>?>> GetByPeriodAsync(GetTransactionByPeriodRequest request);
+        Task<PagedResponse<List<Transaction>?>> GetByPeriodAsync(GetTransactionsByPeriodRequest request);
     }
 }

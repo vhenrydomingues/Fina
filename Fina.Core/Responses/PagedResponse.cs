@@ -21,6 +21,13 @@ namespace Fina.Core.Responses
             CurrentPage = currentPage;
             PageSize = pageSize;
         }
+        public PagedResponse(
+        TData? data,
+        int code = Configuration.DefaultStatusCode,
+        string? message = null)
+        : base(data, code, message)
+    {
+    }
     }
 
 }
